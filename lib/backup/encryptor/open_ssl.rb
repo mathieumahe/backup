@@ -56,7 +56,7 @@ module Backup
       # Always sets a password option, if even no password is given,
       # but will prefer the password_file option if both are given.
       def options
-        opts = ["aes-256-cbc"]
+        opts = ["aes-256-cbc", "-pbkdf2"]
         opts << "-base64" if @base64
         opts << "-salt"   if @salt
 
